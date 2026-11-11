@@ -1,0 +1,28 @@
+[package]
+name = "chrono-tasker"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "A colorful command-line deadline tracker built with chrono, clap and serde."
+authors = ["swastikjha008-jpg"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/swastikjha008-jpg/chrono-tasker"
+keywords = ["cli", "tasks", "chrono", "deadlines", "learning"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+chrono = { version = "0.4.45", features = ["serde"] }
+clap = { version = "4.6.7", features = ["derive", "env"] }
+colored = "3.1.1"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+thiserror = "2.0.21"
+
+[dev-dependencies]
+tempfile = "3.27.0"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

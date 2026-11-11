@@ -1,0 +1,15 @@
+# Build output
+/target/
+
+# Your personal task data
+/tasks.json
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
